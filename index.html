@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function calculate(){
+				var first = eval(document.getElementById("first").value);
+				var second = eval(document.getElementById("second").value);
+				var total = 0;
+				
+				for(var x = 0; x < second; x++){
+					total = total + first;
+				}
+				
+				document.getElementById("prod").value = total;
+			}
+			
+			function clr(){
+				document.getElementById("first").value = "";
+				document.getElementById("second").value = "";
+				document.getElementById("total").value = "";
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			First number <input type="text" id="first"><br/>
+			Second number <input type="text" id="second"><br/>
+			Product <input type="text" id="prod" disabled="disabled"><br/>
+			<input type="button" value="Calculate" onclick="calculate()">
+			<input type="button" value="Clear" onclick="clr()">
+		</form>
+	</body>
+</html>
